@@ -1,4 +1,4 @@
-const Portfolio = function() {
+const Portfolio = function () {
 	function makeWords() {
 		var words = [
 			{
@@ -34,14 +34,14 @@ const Portfolio = function() {
 	}
 
 	function makeWordCloud(words) {
-		$('.teaching-domains').jQCloud(words, {delay: 120});
+		$('.teaching-domains').jQCloud(words, { delay: 180 });
 	}
 
 	function displayWordCloud() {
 		var count = 1;
-		$(window).on('scroll', function() {
+		$(window).on('scroll', function () {
 			var y_scroll_pos = window.pageYOffset;
-			var scroll_pos_test = 2700; // set to whatever you want it to be
+			var scroll_pos_test = 2400; // set to whatever you want it to be
 			var words = makeWords();
 			if (y_scroll_pos > scroll_pos_test && count <= 1) {
 				makeWordCloud(words);
@@ -64,11 +64,11 @@ const Portfolio = function() {
 			// typing speed
 			typeSpeed: 1,
 			contentType: 'text',
-			callback: function() {
-				$("#writing-text").css({"color": "#fff", "background-color": "#C8412B"});
+			callback: function () {
+				$("#writing-text").css({ "color": "#fff", "background-color": "#C8412B" });
 			},
-			preStringTyped: function() {},
-			onStringTyped: function() {}
+			preStringTyped: function () { },
+			onStringTyped: function () { }
 		});
 	}
 
